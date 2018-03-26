@@ -51,7 +51,7 @@ test('should set amount if valid input', () => {
     expect(wrapper.state('amount')).toBe(value);
 })
 
-test('should not set amount if valid input', () => {
+test('should not set amount if invalid input', () => {
     const value = '12.555';
     const wrapper = shallow(<ExpenseForm />);
     wrapper.find('input').at(1).simulate('change', {
